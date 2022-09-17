@@ -1,0 +1,32 @@
+
+<div class="alert alert-success" *ngIf="reponse!=null || reponse!=undefined" style="width:20%;margin: 1% auto 0 auto;"  role="alert">
+  <a type="button"  [href]="reponse.url" target="_blank" class="btn btn-outline-success">Voir le message de succès</a>
+</div>
+<form style="width:50%;margin: 3% auto 0 auto;">
+  <div class="form-group row">
+    <label for="Email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="Email" [(ngModel)]="email" name="id" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="date" class="col-sm-2 col-form-label">Date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)]="date" name="date" id="date" placeholder="Date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="git" class="col-sm-2 col-form-label">Url Repo Git</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="git" [(ngModel)]="urlGithub" name="urlRelais"  placeholder="Url Repo Git">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="Message" class="col-sm-2 col-form-label">Message</label>
+    <div class="col-sm-10">
+      <textarea type="text" rows="4" class="form-control" [(ngModel)]="message" name="message" id="Message" placeholder="Message"></textarea>
+    </div>
+  </div>
+  <button style="width:30%;margin: 0 auto;" (click)="_submit()" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+
+</form>
