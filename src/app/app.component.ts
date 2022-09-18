@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Reponse } from './models/reponse';
 import { CandidatService } from './services/candidat.service';
 
@@ -16,7 +17,7 @@ export class AppComponent {
   reponse!:Reponse;
   
 
-  constructor(public candidatService:CandidatService){}
+  constructor(public candidatService:CandidatService,public router:Router){}
 
   _submit():void{
     let data = {
@@ -29,7 +30,7 @@ export class AppComponent {
           }
    }
     this.candidatService.sendData(data).subscribe(
-      (resp:any)=>{
+      (resp:Response)=>{
         this.reponse=resp;
         console.log(resp)},
       (err:HttpErrorResponse)=>{console.log(err)}
