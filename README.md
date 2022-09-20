@@ -1,5 +1,3 @@
-Bonjour Monsieur Kevin,
-j'ai résolu le problème .
 j'ai fait  la redirection de ma requête HTTP avec Spring boot ,premièrement la requête passe de Angular vers Spring boot (pour éviter le probleme du CORS) et puis Spring boot  envoie la requête à l'API c'est à dire que j'ai utilisé la consommation des webservices avec Spring boot .
 
 
